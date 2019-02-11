@@ -1,5 +1,7 @@
 package com.csci448.connorkoch.connorkoch_a1
 
+import android.content.Intent
+import android.support.v4.content.ContextCompat.startActivity
 import android.util.Log
 
 object QuizMaster {
@@ -20,6 +22,7 @@ object QuizMaster {
     private fun getCurrentQuestion() = questionBank[currentQuestionIndex]
     fun getCurrentQuestionTextId() = getCurrentQuestion().textResId
     fun getCurrentAnswer() = getCurrentQuestion().isAnswerTrue
+    fun getCurrentQuestionIndex() = currentQuestionIndex
 
     fun moveToNextQuestion() {
         if(currentQuestionIndex == 5) currentQuestionIndex = 0
